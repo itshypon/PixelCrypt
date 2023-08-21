@@ -23,35 +23,36 @@ imageInput.addEventListener("change", function (event) {
   }
 });
 
-// const out = document.getElementById("imageOutput");
+const out = document.getElementById("outputImg");
 
-// document.querySelector("#encodeImgBtn").addEventListener("click", () => {
-//   const a = document.querySelector("#test").value;
-//   const file = imageInput.files[0];
-//   if (file) {
-//     const reader = new FileReader();
-//     reader.onload = function (event) {
-//       const img = document.createElement("img");
-//       img.src = steg.encode(a, event.target.result);
-//       img.alt = "output";
-//       out.innerHTML = "";
-//       out.appendChild(img);
+document.querySelector(".encodeBtn").addEventListener("click", () => {
+  const a = document.querySelector(".inputText").value;
+  const file = imageInput.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function (event) {
+      const img = document.createElement("img");
+      img.src = steg.encode(a, event.target.result);
+      img.alt = "output";
+      out.innerHTML = "";
+      img.classList.add("w-full", "h-full");
+      out.appendChild(img);
 
-//       downloadLink.style.display = "block";
-//       downloadLink.href = img.src;
-//       downloadLink.download = file.name;
-//     };
-//     reader.readAsDataURL(file);
-//   }
-// });
-// const msg = document.querySelector("textarea");
-// document.querySelector("#decode").addEventListener("click", () => {
-//   const file = imageInput.files[0];
-//   if (file) {
-//     const reader = new FileReader();
-//     reader.onload = function (event) {
-//       msg.innerHTML = steg.decode(event.target.result);
-//     };
-//     reader.readAsDataURL(file);
-//   }
-// });
+      downloadLink.style.display = "block";
+      downloadLink.href = img.src;
+      downloadLink.download = file.name;
+    };
+    reader.readAsDataURL(file);
+  }
+});
+const msg = document.querySelector(".outputText");
+document.querySelector(".decodeBtn").addEventListener("click", () => {
+  const file = imageInput.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function (event) {
+      msg.innerHTML = steg.decode(event.target.result);
+    };
+    reader.readAsDataURL(file);
+  }
+});
