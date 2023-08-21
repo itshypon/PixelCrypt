@@ -1,6 +1,3 @@
-
-
-
 const imageInput = document.getElementById("imageInput");
 const imageContainer = document.getElementById("uploadedImg");
 const downloadLink = document.getElementById("downloadLink");
