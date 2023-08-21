@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encode/Decode</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#100d22]">
+    
+        <div class="navbar flex justify-around align-center px-7 md:px-0 py-8">
+            <div class="logo text-3xl">
+                PIXELCRYPT
+            </div>
+            <div class="rightnav flex items-center sm:gap-5">
+                <a class="hidden md:block" href="#feature">About</a>
+                <button class="rounded-2xl px-4 py-2 bg-[#FFD700] text-black" >
+                    Register/Login
+                </button>
+            </div>
+        </div>
+
+        <div class="main flex justify-center mt-16 mb-16 md:mt-32">
+            <div class="content flex flex-col gap-20">
+                <div class="inputFile flex justify-center">
+                    <label class="rounded-2xl px-4 py-2 bg-[#FFD700] text-black cursor-pointer">
+                        Choose File
+                        <input type="file" id="imageInput" class="hidden">
+                    </label>        
+                </div>
+                <div id="uploadedImg" class="uploadedImg border-white border rounded-md w-[20rem] h-[20rem] mx-auto">
+                        <div class="flex justify-center my-[10rem]">No Image Uploaded</div>
+                </div>
+                <div class="encodeCont md:flex md:gap-10">
+                <div class="inputText">
+                    <textarea class="text-white h-[20rem] w-[20rem] bg-[#100d22] p-4 border rounded-md border-white" name="" id="" cols="30" rows="10" placeholder="Enter Message Here"></textarea>
+                </div>
+                <div id="outputImg" class=" border-white border rounded-md w-[20rem] h-[20rem] mx-auto">
+                        
+                </div>
+            </div>
+                <div class="encode flex justify-center">
+                    <button class="rounded-2xl px-4 py-2 bg-[#FFD700] text-black" >
+                        Encode
+                    </button>
+                </div>
+                <hr class="border border-solid border-[#FFD700] mx-40">
+                <div class="outputText flex justify-center h-[20rem]">
+                    <textarea class="text-white bg-[#100d22] h-[20rem] w-[20rem] p-4 border rounded-md border-white" name="" id="" cols="30" rows="10" placeholder="Enter Message Here"></textarea>
+                </div>
+                <div class="decode flex justify-center">
+                    <button class="rounded-2xl px-4 py-2 bg-[#FFD700] text-black" >
+                        Decode
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer bg-[#DDF700] p-8 flex md:justify-around gap-8 md:mt-64">
+            <div class="title text-3xl text-black flex items-center">
+                PIXELCRYPT
+            </div>
+            <div class="detail flex flex-col gap-2">
+                <div class="text-black text-2xl">Contact</div>
+                <div class="text-black">Email : itshypon@gmail.com</div>
+                <div class="text-black">Twitter : @itshypon</div>
+                <div class="text-black">Github : itshypon</div>
+            </div>
+    
+        </div>
+    
+
+    <script src="index.js"></script>
+    <script src="steganography.min.js"></script>
+</body>
+</html>
