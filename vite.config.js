@@ -1,4 +1,8 @@
+
+import tailwindcss from 'tailwindcss';
+
 export default {
+  plugins: [tailwindcss()],
     build: {
       rollupOptions: {
         input: {
