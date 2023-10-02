@@ -696,3 +696,8 @@ video {
         padding-right: 8rem
     }
 }
+
+.resBtn{
+    display: none;
+    margin-right: 30px;
+}
