@@ -5,7 +5,9 @@ const resBtn = document.querySelector('.resBtn')
 
 imageInput.addEventListener("change", function (event) {
   const file = event.target.files[0];
-  if (file) {
+  if (!(file.name.toLowerCase().endsWith('.png')|| file.name.toLowerCase().endsWith('.jpeg') || file.name.toLowerCase().endsWith('.jpg'))) {
+    alert("Please Upload An Image");
+}else if (file) {
     const reader = new FileReader();
     reader.onload = function (event) {
       const img = document.createElement("img");

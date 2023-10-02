@@ -701,3 +701,31 @@ video {
     display: none;
     margin-right: 30px;
 }
+
+button{
+    box-shadow: 5px 10px #05040a;
+}
+
+button:hover{
+    background-color: #a58c00;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    box-shadow: none;
+}
+label{
+    box-shadow: 5px 10px #05040a;
+}
+
+label:hover{
+    background-color: #a58c00;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    box-shadow: none;
+}
+
