@@ -697,6 +697,11 @@ video {
     }
 }
 
+.resBtn{
+    display: none;
+    margin-right: 30px;
+}
+
 button{
     box-shadow: 5px 10px #05040a;
 }
@@ -723,6 +728,4 @@ label:hover{
     -o-transition: 1s;
     box-shadow: none;
 }
-
-
 

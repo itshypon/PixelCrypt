@@ -1,6 +1,7 @@
 const imageInput = document.getElementById("imageInput");
 const imageContainer = document.getElementById("uploadedImg");
 const downloadLink = document.getElementById("downloadLink");
+const resBtn = document.querySelector('.resBtn')
 
 imageInput.addEventListener("change", function (event) {
   const file = event.target.files[0];
@@ -40,10 +41,16 @@ document.querySelector(".encodeBtn").addEventListener("click", () => {
       downloadLink.style.display = "block";
       downloadLink.href = img.src;
       downloadLink.download = file.name;
+      resBtn.style.display = "block";
+      resBtn.addEventListener('click', ()=>{
+        img.remove();
+        imageContainer.removeChild(imageContainer.firstChild);
+      })
     };
     reader.readAsDataURL(file);
   }
 });
+
 const msg = document.querySelector(".outputText");
 document.querySelector(".decodeBtn").addEventListener("click", () => {
   const file = imageInput.files[0];
